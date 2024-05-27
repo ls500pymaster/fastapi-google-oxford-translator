@@ -68,3 +68,42 @@ fastapi_translation_service/
 - Docker Compose
 
 ### Setup
+1. **Clone the Repository**:
+
+   ```bash
+   git clone git@github.com:ls500pymaster/fastapi-google-translator.git
+   cd fastapi-google-translator
+   
+2. **Create .env File:**
+
+OXFORD_APP_ID=your_oxford_app_id
+
+OXFORD_APP_KEY=your_oxford_app_key
+
+OXFORD_BASE_URL=https://od-api.oxforddictionaries.com/api/v2
+
+3. **Register Oxford Dictionaries Account**
+
+- https://developer.oxforddictionaries.com/admin/applications/
+- Create application and prepare API Base URL, Application ID, Application Key
+
+
+4. **Build and Run the Docker Containers:**
+
+   ```bash
+   docker-compose up --build```
+
+### Usage
+**Access the API Documentation:**
+
+- Once the application is running, you can access the Swagger UI for API documentation at: http://localhost:8000/docs
+- Alternatively, you can use ReDoc at: http://localhost:8000/redoc
+- Example CURL request to get word details:
+
+```bash curl -X 'GET' 'http://127.0.0.1:8000/api/v1/words/ace' -H 'accept: application/json```
+
+
+
+
+
+
